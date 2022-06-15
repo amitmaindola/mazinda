@@ -20,104 +20,9 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Play&family=Raleway:wght@800&display=swap" rel="stylesheet"> 
-    <style>
-        .hide-scroll-bar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .hide-scroll-bar::-webkit-scrollbar {
-          display: none;
-        }
-        .product-box{
-            width: 300px;
-            margin-bottom: 20px;
-            background-color: white;
-            padding: 10px 0px;
-            border-radius: 10px;
-        }
-        .product-img-box{
-            height: 300px;
-            width: 300px;
-            margin: 0;
-            border-radius: 10px;
-        }
-        .product-img-box image{
-            object-fit: contain;
-        }
-        .product-box p{
-            margin: 0;
-            padding: 0;
-        }
-
-        @media only screen and (max-width: 320px) {
-            .product-box{
-                width: 250px!important;
-            }
-            .product-img-box{
-                width: 250px!important;
-                height: 250px!important;
-            }
-        }
-        @media only screen and (max-width: 778px) {
-            #register1{
-                display: none;
-            }
-            #register2{
-                display: block!important;
-            }
-            .category{
-                width: 60px;
-                padding-left: 0px!important;
-            }
-            .category img{
-                width: 50px!important;
-                height: 50px!important;
-                margin-bottom: 0px!important;
-            }
-            .category p{
-                display: none;
-            }
-            #carouselExampleControls img{
-                height: 110px;
-                object-fit: cover;
-            }
-        }
-        #overlay li{
-            color: rgb(40, 39, 124);
-            font-size: 18px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-        #overlay{
-            transform: translateX(-300px);
-            transition: 0.3s all ease-in-out;
-        }
-        #main{
-            transition: 0.3s all ease-in-out;
-        }
-        .category-box{
-            width: 170px;
-            margin: 20px 30px;
-        }
-        .category-box .offer{
-            width: 140px;
-            border-radius: 10px 0px;
-            transition: all 0.3s ease-in-out;
-            transform: rotate(-15deg) /* translateX(-30px) */;
-        }
-        /* .category-box .offer:hover{
-            width: 170px;
-            transform: rotate(0deg);
-        } */
-        .category-box .image-box{
-            width: 170px;
-            height: 170px;
-        }
-
-        .heading { color: #000000; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&family=Raleway:wght@800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class=" font-sans leading-normal tracking-normal mt-12">
@@ -157,7 +62,7 @@
 
     <div id="overlay" style="background-color: orange; height: 100%; width: 300px; max-width: 100%; z-index: 1000; position: fixed; top:53px; border-top: white 2px solid;">
         <ul class="cover list-none">
-            <a href="/admin/"><li>Dashboard</li></a>
+            <a href="/"><li>Home</li></a>
             <a href="/admin/store"><li>Add/Drop Store</li></a>
             <a href="/admin/products"><li>Approve Products</li></a>
             <a href="/admin/money"><li>Money Management</li></a>
@@ -173,7 +78,7 @@
 
 
     <div  id="main" >
-        <div class="categories pt-1 flex flex-col bg-white">
+        <div class="categories pt-1 flex flex-col">
                   <div class="flex overflow-x-scroll hide-scroll-bar">
                     <div class="mt-3 flex flex-nowrap lg:mx-40 md:mx-20 mx-10 ">
                       <div class="inline-block px-3 category">
@@ -272,6 +177,35 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+        </div>
+
+        <div class="infoBox lg:px-40 md:px-20  text-center flex flex-row justify-around">
+            <div class="info info-1  flex flex-row justify-around flex-wrap">
+                <div class="icon text-3xl">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+                <div class="iconinfo">
+                    Cash On Delivery
+                </div>
+            </div>
+            <div class="info infobar"></div>
+            <div class="info info-2 flex flex-row justify-around flex-wrap">
+                <div class="icon text-3xl">
+                    <i class="fa-solid fa-truck-arrow-right"></i>
+                </div>
+                <div class="iconinfo">
+                    Free Delivery, Free Return
+                </div>
+            </div>
+            <div class="info infobar  "></div>
+            <div class="info info-3  flex flex-row justify-around flex-wrap">
+                <div class="icon text-3xl">
+                    <i class="fa-solid fa-tags"></i>
+                </div>
+                <div class="iconinfo">
+                    Lowest Price
+                </div>
+            </div>
         </div>
 
         <div class=" categoryBoxes lg:mx-40 md:mx-20 mx-10 text-black pt-4">
